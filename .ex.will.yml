@@ -12,7 +12,7 @@ about :
   - firefox >= 60.0.0
   keywords :
   - tools
-  - wModuleForTesting1
+  - wTools
   license : MIT
   author : 'Kostiantyn Wandalen <wanalen@01.school>'
   contributors :

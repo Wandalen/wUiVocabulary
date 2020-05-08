@@ -2,8 +2,8 @@
 
 submodule :
 
-  wModuleForTesting1 :
-    path : npm:///wModuleForTesting1
+  wTools :
+    path : npm:///wTools
     enabled : 0 # submodule
 
 path :
@@ -219,4 +219,3 @@ build :
       - build::raw.release
       - build::release
       - build::npm
-

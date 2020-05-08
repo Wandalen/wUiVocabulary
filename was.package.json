@@ -27,7 +27,7 @@
   },
   "dependencies" :
   {
-    "wModuleForTesting1" : ""
+    "wTools" : ""
   },
   "devDependencies" :
   {
@@ -36,6 +36,6 @@
   },
   "keywords" :
   [
-    "wModuleForTesting1"
+    "wTools"
   ]
 }

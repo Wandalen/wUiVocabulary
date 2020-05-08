@@ -13,12 +13,12 @@ if( typeof module !== 'undefined' )
     catch( err )
     {
       toolsExternal = 1;
-      require( 'wModuleForTesting1' );
+      require( 'wTools' );
     }
     if( !toolsExternal )
     require( toolsPath );
   }
 
-  module[ 'exports' ] = _global_.wModuleForTesting1;
+  module[ 'exports' ] = _global_.wTools;
 
 }
