@@ -16,7 +16,7 @@
   {
     "url" : "https ://github.com/Wandalen/wUiVocabulary/issues"
   },
-  "dependencies" : { "wTools" : "" },
-  "devDependencies" : { "wTesting" : "", "wuivocabulary" : "file:." },
+  "dependencies" : { "wTools" : "alpha" },
+  "devDependencies" : { "wuivocabulary" : "file:.", "wTesting" : "alpha" },
   "keywords" : [ "wTools" ]
 }
