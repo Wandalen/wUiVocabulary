@@ -2,7 +2,7 @@
 {
   "name" : "wuivocabulary",
   "version" : "0.3.0",
-  "description" : "___",
+  "description" : "Class to connect phrases with dom elements on the page",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
   "main" : "proto/dwtools/amid/ghi/Vocabulary.s",
