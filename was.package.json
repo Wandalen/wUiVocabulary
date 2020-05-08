@@ -5,11 +5,11 @@
   "description" : "___",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
-  "main" : "proto/dwtools/___",
+  "main" : "proto/dwtools/amid/ghi/Vocabulary.s",
   "files" :
   [
-    "proto/dwtools/___",
-    "proto/dwtools/ModuleForTesting1.s"
+    "proto/dwtools/amid/ghi",
+    "proto/dwtools/Tools.s"
   ],
   "scripts" :
   {
@@ -27,7 +27,10 @@
   },
   "dependencies" :
   {
-    "wModuleForTesting1" : ""
+    "wTools" : "",
+    "wCopyable" : "",
+    "wLogger" : "",
+    "wvocabulary" : ""
   },
   "devDependencies" :
   {
