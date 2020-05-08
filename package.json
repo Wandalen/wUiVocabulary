@@ -1,11 +1,11 @@
 {
   "name" : "wuivocabulary",
-  "version" : "0.3.1",
-  "description" : "___",
+  "version" : "0.3.2",
+  "description" : "Class to connect phrases with dom elements on the page",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
-  "main" : "proto/dwtools/___",
-  "files" : [ "proto/dwtools/___", "proto/dwtools/ModuleForTesting1.s" ],
+  "main" : "proto/dwtools/amid/ghi/Vocabulary.s",
+  "files" : [ "proto/dwtools/amid/ghi", "proto/dwtools/Tools.s" ],
   "scripts" : { "test" : "wtest .run proto", "docgen" : "wdocgen .build proto" },
   "repository" :
   {
@@ -16,7 +16,13 @@
   {
     "url" : "https ://github.com/Wandalen/wUiVocabulary/issues"
   },
-  "dependencies" : { "wTools" : "alpha" },
+  "dependencies" :
+  {
+    "wTools" : "alpha",
+    "wCopyable" : "alpha",
+    "wLogger" : "alpha",
+    "wvocabulary" : "alpha"
+  },
   "devDependencies" : { "wuivocabulary" : "file:.", "wTesting" : "alpha" },
   "keywords" : [ "wTools" ]
 }

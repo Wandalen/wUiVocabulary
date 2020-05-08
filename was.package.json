@@ -1,6 +1,6 @@
 {
   "name" : "wuivocabulary",
-  "version" : "0.3.1",
+  "version" : "0.3.2",
   "description" : "Class to connect phrases with dom elements on the page",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
@@ -16,7 +16,13 @@
   {
     "url" : "https ://github.com/Wandalen/wUiVocabulary/issues"
   },
-  "dependencies" : { "wTools" : "", "wCopyable" : "", "wLogger" : "", "wvocabulary" : "" },
+  "dependencies" :
+  {
+    "wTools" : "",
+    "wCopyable" : "",
+    "wLogger" : "",
+    "wvocabulary" : ""
+  },
   "devDependencies" : { "wTesting" : "", "wuivocabulary" : "file:." },
   "keywords" : [ "wTools" ]
 }

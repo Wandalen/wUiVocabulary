@@ -6,8 +6,8 @@ consistency:
     hash: c090db7d44f683ae164f34e9cf3c557b
     size: 1689
   ../.im.will.yml: &ref_1
-    hash: b0d6f35cbd74cfdd69d9fd4fef89fc0a
-    size: 4559
+    hash: 0cf5bece19fefc0cd7fd9d9b765bd8fe
+    size: 4911
 module:
   wUiVocabulary.out:
     about:
@@ -106,7 +106,7 @@ module:
       entry.proto.no.tests:
         criterion:
           tests: no.tests
-        path: ../proto/dwtools/___
+        path: ../proto/dwtools/amid/ghi/Vocabulary.s
       entry.proto.only.tests:
         criterion:
           tests: only.tests
@@ -116,13 +116,13 @@ module:
           debug: debug
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/___'
+        path: '{path::out.*=1}/source/dwtools/amid/ghi/Vocabulary.s'
       entry.out.raw.debug.release:
         criterion:
           debug: release
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/___'
+        path: '{path::out.*=1}/source/dwtools/amid/ghi/Vocabulary.s'
       entry.out.compiled.debug.debug:
         criterion:
           debug: debug
@@ -149,15 +149,35 @@ module:
         path:
           - ../proto
           - ../proto/dwtools
-          - ../proto/dwtools/ModuleForTesting1.s
+          - ../proto/dwtools/Tools.s
           - ../proto/dwtools/abase
           - ../proto/dwtools/amid
+          - ../proto/dwtools/amid/ghi
+          - ../proto/dwtools/amid/ghi/Vocabulary.s
           - ../proto/dwtools/atop
     submodule:
       wTools:
         path: 'npm:///wTools'
         autoExporting: 0
         enabled: 0
+      wCopyable:
+        path: 'npm:///wCopyable'
+        autoExporting: 0
+        enabled: 0
+      wLogger:
+        path: 'npm:///wLogger'
+        autoExporting: 0
+        enabled: 0
+      wvocabulary:
+        path: 'npm:///wvocabulary'
+        autoExporting: 0
+        enabled: 0
+      wTesting:
+        path: 'npm:///wTesting'
+        autoExporting: 0
+        enabled: 0
+        criterion:
+          development: 1
     reflector:
       reflect.proto.debug.raw:
         src:
@@ -863,7 +883,7 @@ module:
       entry.proto.no.tests:
         criterion:
           tests: no.tests
-        path: proto/dwtools/___
+        path: proto/dwtools/amid/ghi/Vocabulary.s
       entry.proto.only.tests:
         criterion:
           tests: only.tests
@@ -873,13 +893,13 @@ module:
           debug: debug
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/___'
+        path: '{path::out.*=1}/source/dwtools/amid/ghi/Vocabulary.s'
       entry.out.raw.debug.release:
         criterion:
           debug: release
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/___'
+        path: '{path::out.*=1}/source/dwtools/amid/ghi/Vocabulary.s'
       entry.out.compiled.debug.debug:
         criterion:
           debug: debug
@@ -897,6 +917,24 @@ module:
         path: 'npm:///wTools'
         autoExporting: 0
         enabled: 0
+      wCopyable:
+        path: 'npm:///wCopyable'
+        autoExporting: 0
+        enabled: 0
+      wLogger:
+        path: 'npm:///wLogger'
+        autoExporting: 0
+        enabled: 0
+      wvocabulary:
+        path: 'npm:///wvocabulary'
+        autoExporting: 0
+        enabled: 0
+      wTesting:
+        path: 'npm:///wTesting'
+        autoExporting: 0
+        enabled: 0
+        criterion:
+          development: 1
     reflector:
       reflect.proto.debug.raw:
         src:
@@ -1450,5 +1488,5 @@ module:
         hash: c090db7d44f683ae164f34e9cf3c557b
         size: 1689
       ../.im.will.yml:
-        hash: b0d6f35cbd74cfdd69d9fd4fef89fc0a
-        size: 4559
+        hash: 0cf5bece19fefc0cd7fd9d9b765bd8fe
+        size: 4911
