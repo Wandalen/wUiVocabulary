@@ -1,5 +1,5 @@
 
-# wUiVocabulary[![Build Status](https://travis-ci.org/Wandalen/wUiVocabulary.svg?branch=master)](https://travis-ci.org/Wandalen/wUiVocabulary)
+# wUiVocabulary[![Status](https://github.com/Wandalen/wUiVocabulary/workflows/Test/badge.svg)](https://github.com/Wandalen/wUiVocabulary}/actions?query=workflow%3ATest)
 
 Class to connect phrases with dom elements on the page.
 
