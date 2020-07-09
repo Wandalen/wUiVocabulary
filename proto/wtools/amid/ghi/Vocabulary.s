@@ -5,7 +5,7 @@
 if( typeof module !== 'undefined' )
 {
 
-  require( '../../../dwtools/Tools.s' );
+  require( '../../../wtools/Tools.s' );
 
   var _ = _global_.wTools;
 

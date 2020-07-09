@@ -55,7 +55,7 @@ path :
       content : prime
 
   entry.proto.no.tests :
-    path : proto/dwtools/amid/ghi/Vocabulary.s
+    path : proto/wtools/amid/ghi/Vocabulary.s
     criterion :
       tests : 'no.tests'
   entry.proto.only.tests :
@@ -64,7 +64,7 @@ path :
       tests : 'only.tests'
 
   entry.out.raw.debug :
-    path : '{path::out.*=1}/source/dwtools/amid/ghi/Vocabulary.s'
+    path : '{path::out.*=1}/source/wtools/amid/ghi/Vocabulary.s'
     criterion :
       debug : [ debug, release ]
       raw : raw
