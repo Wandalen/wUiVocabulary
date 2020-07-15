@@ -6,5 +6,5 @@ Class to connect phrases with dom elements on the page.
 ## Try out
 ```
 npm install
-node sample/Sample.js
+node sample/Sample.s
 ```
