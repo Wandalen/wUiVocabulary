@@ -7,7 +7,7 @@ if( typeof module !== 'undefined' )
 
   require( '../../../wtools/Tools.s' );
 
-  var _ = _global_.wTools;
+  let _ = _global_.wTools;
 
   _.include( 'wLogger' );
   _.include( 'wVocabulary' );
@@ -17,9 +17,9 @@ if( typeof module !== 'undefined' )
 //
 
 var $ = typeof jQuery !== 'undefined' ? jQuery : null;
-var _ = _global_.wTools;
-var Parent = null;
-var Self = function wGhiVocabulary( o )
+let _ = _global_.wTools;
+let Parent = null;
+let Self = function wGhiVocabulary( o )
 {
   return _.workpiece.construct( Self, this, arguments );
 }
