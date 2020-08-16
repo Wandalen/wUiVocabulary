@@ -1,1 +1,28 @@
-{"name":"wuivocabulary","version":"0.3.19","description":"Class to connect phrases with dom elements on the page","author":"Kostiantyn Wandalen <wanalen@01.school>","license":"MIT","main":"proto/wtools/amid/ghi/Vocabulary.s","files":["proto/wtools/amid/ghi","proto/wtools/Tools.s"],"scripts":{"test":"wtest .run 'proto/**' rapidity:-3","docgen":"wdocgen .build proto"},"repository":{"type":"git","url":"https ://github.com/Wandalen/wUiVocabulary.git"},"bugs":{"url":"https ://github.com/Wandalen/wUiVocabulary/issues"},"dependencies":{"wTools":"alpha","wCopyable":"alpha","wLogger":"alpha","wvocabulary":"alpha"},"devDependencies":{"wuivocabulary":"file:.","wTesting":"alpha"},"keywords":["wTools"]}
+{
+  "name" : "wuivocabulary",
+  "version" : "0.3.20",
+  "description" : "Class to connect phrases with dom elements on the page",
+  "author" : "Kostiantyn Wandalen <wanalen@01.school>",
+  "license" : "MIT",
+  "main" : "proto/wtools/amid/ghi/Vocabulary.s",
+  "files" : [ "proto/wtools/amid/ghi", "proto/wtools/Tools.s" ],
+  "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen .build proto" },
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "https ://github.com/Wandalen/wUiVocabulary.git"
+  },
+  "bugs" :
+  {
+    "url" : "https ://github.com/Wandalen/wUiVocabulary/issues"
+  },
+  "dependencies" :
+  {
+    "wTools" : "alpha",
+    "wCopyable" : "alpha",
+    "wLogger" : "alpha",
+    "wvocabulary" : "alpha"
+  },
+  "devDependencies" : { "wuivocabulary" : "file:.", "wTesting" : "alpha" },
+  "keywords" : [ "wTools" ]
+}
