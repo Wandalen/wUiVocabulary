@@ -23,6 +23,6 @@
     "wLogger" : "",
     "wvocabulary" : ""
   },
-  "devDependencies" : { "wTesting" : "", "wuivocabulary" : "file:." },
+  "devDependencies" : { "wTesting" : "", "wuivocabulary" : "file:.", "eslint" : "7.1.0" },
   "keywords" : [ "wTools" ]
 }
