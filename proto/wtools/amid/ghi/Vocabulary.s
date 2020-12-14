@@ -870,7 +870,7 @@ var Proto =
   updateHead,
 
   actionsRegister,
-  registerActions,
+  registerActions : actionsRegister,
 
   actionGet,
   eventEachAction,
