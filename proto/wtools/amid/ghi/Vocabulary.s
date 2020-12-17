@@ -1,4 +1,5 @@
-( function _Vocabulary_s_() {
+( function _Vocabulary_s_()
+{
 
 'use strict';
 
@@ -19,7 +20,8 @@ if( typeof module !== 'undefined' )
 var $ = typeof jQuery !== 'undefined' ? jQuery : null;
 let _ = _global_.wTools;
 let Parent = null;
-let Self = function wGhiVocabulary( o )
+let Self = wGhiVocabulary;
+function wGhiVocabulary( o )
 {
   return _.workpiece.construct( Self, this, arguments );
 }
@@ -54,15 +56,16 @@ function initVocabulary()
 {
   var self = this;
 
-  if( self.usingGui ) {
+  if( self.usingGui )
+  {
 
     self.headDom = $( self.headDom );
     self.headMenuDom = self.headDom.children( '.menu' );
     self.phrasesDom = $( self.phrasesDom );
 
-    _.assert( self.headDom.length > 0,'no headDom found' );
-    _.assert( self.headMenuDom.length > 0,'no headMenuDom found' );
-    _.assert( self.phrasesDom.length > 0,'no phrasesDom found' );
+    _.assert( self.headDom.length > 0, 'no headDom found' );
+    _.assert( self.headMenuDom.length > 0, 'no headMenuDom found' );
+    _.assert( self.phrasesDom.length > 0, 'no phrasesDom found' );
 
   }
 
@@ -91,7 +94,7 @@ function initVocabulary()
 
     },
 
-    onChange : function( val,text,event )
+    onChange : function( val, text, event )
     {
 
       var text = text || val;
@@ -101,8 +104,7 @@ function initVocabulary()
 
     },
 
-  })
-  ;
+  });
 
   /*_.dom.uiInitGeneric( self.headDom );*/
 
@@ -147,7 +149,7 @@ function updateHead()
 
 //
 
-function actionsRegister( phrases,o )
+function actionsRegister( phrases, o )
 {
   var self = this;
 
@@ -164,14 +166,14 @@ function actionsRegister( phrases,o )
     }
     else if( _.mapIs( action ) )
     {
-      _.assertMapHasOnly( action,phraseOptionsDefault );
+      _.assertMapHasOnly( action, phraseOptionsDefault );
     }
     else throw _.err( 'unexpected' );
 
     if( o )
-    _.mapSupplement( action,o );
+    _.mapSupplement( action, o );
 
-    _.mapSupplement( action,phraseOptionsDefault );
+    _.mapSupplement( action, phraseOptionsDefault );
 
     return action;
   }
@@ -180,18 +182,18 @@ function actionsRegister( phrases,o )
   phrases = [ phrases ];
 
   var o = o || {};
-  phrases = _.map_( null, phrases,function( e )
+  phrases = _.map_( null, phrases, function( e )
   {
     if( _.routineIs( e ) )
     e = e.action;
     if( _.strIs( e ) )
     return e;
-    return _.mapSupplement( {},e,o );
+    return _.mapSupplement( {}, e, o );
   });
 
   var vocabulary = self.vocabulary = self.vocabulary || wVocabulary
   ({
-    onPhraseDescriptorMake : onPhraseDescriptorMake,
+    onPhraseDescriptorMake,
     clausing : self.clausing,
   });
 
@@ -225,10 +227,10 @@ function actionGet( phrase )
   do
   {
 
-/*
-    if( self.clausing && self.usingClausingAtActionGet )
-    result.action = self.virtualDescriptorMap[ phrase ];
-*/
+    /*
+        if( self.clausing && self.usingClausingAtActionGet )
+        result.action = self.virtualDescriptorMap[ phrase ];
+    */
 
     if( !result.action )
     result.action = self.vocabulary.descriptorMap[ phrase ];
@@ -261,7 +263,7 @@ function eventEachAction( event )
     event.action = descriptor;
     if( descriptor.enabled )
     if( descriptor[ event.kind ] )
-    result[ d ] = descriptor[ event.kind ].call( descriptor.context || self.context,event );
+    result[ d ] = descriptor[ event.kind ].call( descriptor.context || self.context, event );
   }
 
   return result;
@@ -273,7 +275,7 @@ function actionsForSubject( subject )
 {
   var self = this;
 
-  var result = self.vocabulary.subjectDescriptorForWithClause( subject,self.clausing );
+  var result = self.vocabulary.subjectDescriptorForWithClause( subject, self.clausing );
 
   return result;
 }
@@ -285,7 +287,7 @@ function phrasesGet( o )
   var self = this;
   var o = o || {};
 
-  _.routineOptions( phrasesGet , o );
+  _.routineOptions( phrasesGet, o );
 
   var phraseArray = self.vocabulary.phraseArray.slice();
 
@@ -293,7 +295,7 @@ function phrasesGet( o )
   {
 
     for( var p = 0 ; p < phraseArray.length ; p++ )
-    phraseArray[ p ] = _.strReplaceAll( phraseArray[ p ],' ',o.wordDelimeter );
+    phraseArray[ p ] = _.strReplaceAll( phraseArray[ p ], ' ', o.wordDelimeter );
 
   }
 
@@ -331,7 +333,7 @@ function subjectSet( subject )
 
       var dropdownSubject = self.headDom.dropdown( 'get text' );
       if( dropdownSubject !== subject )
-      self.headDom.dropdown( 'set text',subject );
+      self.headDom.dropdown( 'set text', subject );
 
     }
 
@@ -341,7 +343,7 @@ function subjectSet( subject )
 
       subject : self.subject,
       vocabulary : self.vocabulary,
-      phrases : phrases,
+      phrases,
 
     }
 
@@ -352,7 +354,7 @@ function subjectSet( subject )
       self.phrasesDom.html( htmlPhrases );
 
       self.phrasesDom.find( '.item' )
-      .bind( _.eventName( 'click' ), _.routineJoin( self,activate ) );
+      .bind( _.eventName( 'click' ), _.routineJoin( self, activate ) );
 
     }
 
@@ -380,7 +382,7 @@ function handleSubjectBegin( newSubject )
   });
 
   if( begin.length > 1 )
-  throw _.err( 'Vocabulary :','Expects single vocabularySubjectBegin event handler' );
+  throw _.err( 'Vocabulary :', 'Expects single vocabularySubjectBegin event handler' );
 
   if( begin.length === 1 && _.consequenceIs( begin[ 0 ] ) )
   result = begin[ 0 ];
@@ -417,15 +419,15 @@ function handleSubjectEnd()
   {
     if( subjectResult[ d ] )
     {
-      _.time.out( 1,self,self.activate,[{ action : self.vocabulary.descriptorArray[ d ] }] );
+      _.time.out( 1, self, self.activate, [ { action : self.vocabulary.descriptorArray[ d ] } ] );
       break;
     }
   }
 
   if( self.usingBody && self.usingGui )
   {
-    self.bodyDom.attr( 'subject',self.subject );
-    self.bodyDom.attr( 'subject-was',self.subjectWas );
+    self.bodyDom.attr( 'subject', self.subject );
+    self.bodyDom.attr( 'subject-was', self.subjectWas );
   }
 
 }
@@ -446,7 +448,7 @@ function activate( o )
   throw _.err( 'unexepected arguments' );
 
   _.assert( arguments.length === 1 );
-  _.routineOptions( activate , o );
+  _.routineOptions( activate, o );
 
   if( !o.action )
   {
@@ -465,7 +467,7 @@ function activate( o )
 
   if( !o.action )
   {
-    throw _.err( 'Action not found :',o.phrase );
+    throw _.err( 'Action not found :', o.phrase );
     throw _.err( 'not tested' );
   }
 
@@ -477,7 +479,6 @@ activate.defaults =
   phrase : null,
   action : null,
   args : null,
-  phrase : null,
 }
 
 //
@@ -488,21 +489,21 @@ function deactivate( o )
   var o = o || {};
 
   _.assert( arguments.length <= 1 );
-  _.routineOptions( deactivate , o );
+  _.routineOptions( deactivate, o );
 
   if( !self.activeAction )
   return;
 
   if( self.activeAction.onDeactivate )
   self.activeAction.onDeactivate.call( self.activeAction.context || self.context,
-  {
-    kind : names.onDeactivate,
-    vocabulary : self,
-    subject : self.subject,
-    phrase : o.phrase,
-    action : o.action,
-    actionWas : self.activeAction,
-  });
+    {
+      kind : names.onDeactivate,
+      vocabulary : self,
+      subject : self.subject,
+      phrase : o.phrase,
+      action : o.action,
+      actionWas : self.activeAction,
+    });
 
 }
 
@@ -514,7 +515,7 @@ deactivate.defaults =
 
 //
 
-function handleActivate( action,args,argsMap )
+function handleActivate( action, args, argsMap )
 {
   var self = this;
   var con;
@@ -529,8 +530,8 @@ function handleActivate( action,args,argsMap )
   if( self.activeAction )
   self.deactivate
   ({
-    phrase : phrase,
-    action : action,
+    phrase,
+    action,
   });
 
   var phrase = action.phrase;
@@ -539,11 +540,11 @@ function handleActivate( action,args,argsMap )
     kind : names.onActivate,
     subject : self.subject,
     vocabulary : self,
-    phrase : phrase,
-    action : action,
+    phrase,
+    action,
     actionWas : self.activeAction,
-    args : args,
-    argsMap : argsMap
+    args,
+    argsMap
   };
 
   self.handleActivateBegin( e );
@@ -553,18 +554,18 @@ function handleActivate( action,args,argsMap )
     try
     {
       debugger
-      con = action.onActivate.call( action.context || self.context,e );
+      con = action.onActivate.call( action.context || self.context, e );
     }
     catch( _err )
     {
       debugger;
-      var err = _.err( 'error executing onActive of',action.phrase,'action\n',_err );
+      var err = _.err( 'error executing onActive of', action.phrase, 'action\n', _err );
       _.errLog( err );
       con = new _.Consequence().error( err );
     }
   }
   else if( self.verbosity )
-  console.log( 'no "activate" handler for action',phrase );
+  console.log( 'no "activate" handler for action', phrase );
 
   con = _.Consequence.From( con );
 
@@ -629,9 +630,10 @@ function handleActivateEnd( e )
 
   // logger.log( 'handleActivateEnd',e.action ? e.action.phrase : null );
 
-  if( self.activeAction !== e.action ) {
+  if( self.activeAction !== e.action )
+  {
     debugger;
-    throw _.err( 'action','"'+e.action.phrase+'"','is not active to be deactivated','\ncurrent active action :','"'+self.activeAction.phrase+'"' );
+    throw _.err( 'action', '"'+e.action.phrase+'"', 'is not active to be deactivated', '\ncurrent active action :', '"'+self.activeAction.phrase+'"' );
   }
 
   self.activeAction = null;
@@ -690,7 +692,7 @@ function _headEnabledSet( src )
   if( src )
   input.removeAttr( 'disabled' );
   else
-  input.attr( 'disabled','1' );
+  input.attr( 'disabled', '1' );
 
 }
 
@@ -844,8 +846,8 @@ var Events =
 
 var Statics =
 {
-  phraseOptionsDefault : phraseOptionsDefault,
-  names : names,
+  phraseOptionsDefault,
+  names,
 }
 
 var Accessors =
@@ -863,46 +865,46 @@ var Accessors =
 var Proto =
 {
 
-  init : init,
-  initVocabulary : initVocabulary,
-  updateHead : updateHead,
+  init,
+  initVocabulary,
+  updateHead,
 
-  actionsRegister : actionsRegister,
+  actionsRegister,
   registerActions : actionsRegister,
 
-  actionGet : actionGet,
-  eventEachAction : eventEachAction,
+  actionGet,
+  eventEachAction,
 
-  actionsForSubject : actionsForSubject,
-  phrasesGet : phrasesGet,
+  actionsForSubject,
+  phrasesGet,
 
-  subjectSet : subjectSet,
-  handleSubjectBegin : handleSubjectBegin,
-  handleSubjectEnd : handleSubjectEnd,
+  subjectSet,
+  handleSubjectBegin,
+  handleSubjectEnd,
 
-  activate : activate,
-  deactivate : deactivate,
+  activate,
+  deactivate,
 
-  handleActivate : handleActivate,
-  handleActivateBegin : handleActivateBegin,
-  handleActivateEnd : handleActivateEnd,
+  handleActivate,
+  handleActivateBegin,
+  handleActivateEnd,
 
-  '_headEnabledSet' : _headEnabledSet,
-  '_headEnabledGet' : _headEnabledGet,
-  '_headFocusedSet' : _headFocusedSet,
-  '_headFocusedGet' : _headFocusedGet,
+  _headEnabledSet,
+  _headEnabledGet,
+  _headFocusedSet,
+  _headFocusedGet,
 
   // var
 
-  phraseOptionsDefault : phraseOptionsDefault,
-  names : names,
+  phraseOptionsDefault,
+  names,
 
   // relations
 
-  Composes : Composes,
-  Associates : Associates,
-  Restricts : Restricts,
-  Events : Events,
+  Composes,
+  Associates,
+  Restricts,
+  Events,
 
 }
 
@@ -918,7 +920,7 @@ _.EventHandler.mixin( Self );
 
 //
 
-_.accessor.declare( Self.prototype,Accessors );
+_.accessor.declare( Self.prototype, Accessors );
 
 //
 
