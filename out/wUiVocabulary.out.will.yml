@@ -2,10 +2,13 @@ format: outwillfile-2.0
 root:
   - wUiVocabulary.out
 consistency:
-  ../.ex.will.yml: &ref_0
+  wUiVocabulary.out.will.yml: &ref_0
+    hash: 1a0b8c8ce9dfcdc4ec16f689add2369d
+    size: 38021
+  ../.ex.will.yml: &ref_1
     hash: a6994f8c46975745f5d591b023a4cd92
     size: 1690
-  ../.im.will.yml: &ref_1
+  ../.im.will.yml: &ref_2
     hash: 0cc540536986e6fc0f785429ec9a4b3e
     size: 5017
 module:
@@ -16,19 +19,19 @@ module:
       description: ___
       enabled: 1
       version: 0.4.0
-      interpreters: &ref_2
+      interpreters:
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords: &ref_3
+      keywords:
         - tools
         - wTools
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: &ref_4
+      contributors:
         - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wuivocabulary
-      npm.scripts: &ref_5
+      npm.scripts:
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -692,6 +695,24 @@ module:
           content: prime
         inherit:
           - files.transpile
+      exported.proto.export:
+        opts:
+          filePath: 'reflector::exported.proto.export'
+        criterion:
+          generated: 1
+          content: proto
+          export: 1
+        inherit:
+          - files.reflect
+      exported.files.proto.export:
+        opts:
+          filePath: 'reflector::exported.files.proto.export'
+        criterion:
+          generated: 1
+          content: proto
+          export: 1
+        inherit:
+          - files.reflect
     build:
       proto.export:
         steps:
@@ -780,8 +801,9 @@ module:
           content: proto
           export: 1
     consistency:
-      ../.ex.will.yml: *ref_0
-      ../.im.will.yml: *ref_1
+      wUiVocabulary.out.will.yml: *ref_0
+      ../.ex.will.yml: *ref_1
+      ../.im.will.yml: *ref_2
   ../:
     about:
       name: wUiVocabulary
@@ -789,13 +811,21 @@ module:
       description: ___
       enabled: 1
       version: 0.4.0
-      interpreters: *ref_2
-      keywords: *ref_3
+      interpreters:
+        - njs >= 10.0.0
+        - chrome >= 60.0.0
+        - firefox >= 60.0.0
+      keywords:
+        - tools
+        - wTools
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: *ref_4
+      contributors:
+        - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wuivocabulary
-      npm.scripts: *ref_5
+      npm.scripts:
+        test: wtest .run proto/**
+        docgen: wdocgen .build proto
     path:
       module.willfiles:
         criterion:
@@ -1466,3 +1496,6 @@ module:
       ../.im.will.yml:
         hash: 0cc540536986e6fc0f785429ec9a4b3e
         size: 5017
+      wUiVocabulary.out.will.yml:
+        hash: 1a0b8c8ce9dfcdc4ec16f689add2369d
+        size: 38021
