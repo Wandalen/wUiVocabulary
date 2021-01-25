@@ -8,7 +8,7 @@ Class to connect phrases with dom elements on the page.
 git clone https://github.com/Wandalen/wUiVocabulary
 cd wUiVocabulary
 npm install
-node sample/Sample.s
+node sample/trivial/Sample.s
 ```
 
 ## To add to your project
