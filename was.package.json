@@ -1,6 +1,6 @@
 {
   "name" : "wuivocabulary",
-  "version" : "0.3.50",
+  "version" : "0.3.51",
   "description" : "Class to connect phrases with dom elements on the page",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
