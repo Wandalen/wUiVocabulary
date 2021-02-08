@@ -17,7 +17,7 @@ if( typeof module !== 'undefined' )
 
 //
 
-var $ = typeof jQuery !== 'undefined' ? jQuery : null;
+var $ = typeof jQuery === 'undefined' ? null : jQuery;
 let _ = _global_.wTools;
 let Parent = null;
 let Self = wGhiVocabulary;
