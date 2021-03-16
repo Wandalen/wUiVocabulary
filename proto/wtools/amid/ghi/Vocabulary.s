@@ -553,12 +553,10 @@ function handleActivate( action, args, argsMap )
   {
     try
     {
-      debugger
       con = action.onActivate.call( action.context || self.context, e );
     }
     catch( _err )
     {
-      debugger;
       var err = _.err( 'error executing onActive of', action.phrase, 'action\n', _err );
       _.errLog( err );
       con = new _.Consequence().error( err );
@@ -632,7 +630,6 @@ function handleActivateEnd( e )
 
   if( self.activeAction !== e.action )
   {
-    debugger;
     throw _.err( 'action', '"'+e.action.phrase+'"', 'is not active to be deactivated', '\ncurrent active action :', '"'+self.activeAction.phrase+'"' );
   }
 
