@@ -8,7 +8,7 @@ if( typeof module !== 'undefined' )
 
   require( '../../../wtools/Tools.s' );
 
-  let _ = _global_.wTools;
+  const _ = _global_.wTools;
 
   _.include( 'wLogger' );
   _.include( 'wVocabulary' );
@@ -18,9 +18,9 @@ if( typeof module !== 'undefined' )
 //
 
 var $ = typeof jQuery === 'undefined' ? null : jQuery;
-let _ = _global_.wTools;
-let Parent = null;
-let Self = wGhiVocabulary;
+const _ = _global_.wTools;
+const Parent = null;
+const Self = wGhiVocabulary;
 function wGhiVocabulary( o )
 {
   return _.workpiece.construct( Self, this, arguments );
@@ -166,7 +166,7 @@ function actionsRegister( phrases, o )
     }
     else if( _.mapIs( action ) )
     {
-      _.assertMapHasOnly( action, phraseOptionsDefault );
+      _.map.assertHasOnly( action, phraseOptionsDefault );
     }
     else throw _.err( 'unexpected' );
 
@@ -859,7 +859,7 @@ var Accessors =
 // proto
 // --
 
-var Proto =
+const Proto =
 {
 
   init,
