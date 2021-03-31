@@ -5,7 +5,7 @@
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
   "main" : "proto/wtools/amid/ghi/Vocabulary.s",
-  "files" : [ "proto/wtools/amid/ghi", "proto/wtools/Tools.s" ],
+  "files" : [ "proto/wtools/amid/ghi", "proto/wtools/Tools.s", "proto/node_modules" ],
   "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen .build proto" },
   "repository" :
   {
@@ -23,6 +23,6 @@
     "wLogger" : "",
     "wvocabulary" : ""
   },
-  "devDependencies" : { "wTesting" : "", "wuivocabulary" : "file:.", "eslint" : "7.1.0" },
+  "devDependencies" : { "wTesting" : "", "eslint" : "7.1.0" },
   "keywords" : [ "wTools" ]
 }
