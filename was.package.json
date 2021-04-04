@@ -4,7 +4,7 @@
   "description" : "Class to connect phrases with dom elements on the page",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
-  "main" : "proto/wtools/amid/ghi/Vocabulary.s",
+  "main" : "proto/node_modules/wuivocabulary",
   "files" : [ "proto/wtools/amid/ghi", "proto/wtools/Tools.s", "proto/node_modules" ],
   "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen .build proto" },
   "repository" :
