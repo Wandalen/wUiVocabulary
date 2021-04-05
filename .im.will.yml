@@ -77,8 +77,8 @@ path:
       raw: compiled
       content: prime
   npm.proto.entry:
-    - /pro/module/wUiVocabulary/proto/wtools/amid/ghi/Vocabulary.s
-    - /pro/module/wUiVocabulary/proto/node_modules/wuivocabulary
+    - proto/wtools/amid/ghi/Vocabulary.s
+    - proto/node_modules/wuivocabulary
 reflector:
   reflect.proto:
     inherit: predefined.*
