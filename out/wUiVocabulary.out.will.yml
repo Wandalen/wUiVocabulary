@@ -1508,6 +1508,4 @@ module:
       ../.im.will.yml:
         hash: ee60037acc0e8420cce9dcfa6eb78f3a
         size: 5000
-      wUiVocabulary.out.will.yml:
-        hash: 0c65fbeb663783b56f75d4b6b8e65dc2
-        size: 38400
+      wUiVocabulary.out.will.yml: *ref_0
