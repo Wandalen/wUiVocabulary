@@ -155,7 +155,7 @@ function actionsRegister( phrases, o )
 
   _.assert( arguments.length <= 2 );
 
-  function onPhraseDescriptorMake( action )
+  function onPhraseDescriptorFrom( action )
   {
     if( _.routineIs( action ) )
     action = action.action;
@@ -193,7 +193,7 @@ function actionsRegister( phrases, o )
 
   var vocabulary = self.vocabulary = self.vocabulary || wVocabulary
   ({
-    onPhraseDescriptorMake,
+    onPhraseDescriptorFrom,
     clausing : self.clausing,
   });
 
@@ -233,7 +233,7 @@ function actionGet( phrase )
     */
 
     if( !result.action )
-    result.action = self.vocabulary.descriptorMap[ phrase ];
+    result.action = self.vocabulary.phraseMap[ phrase ];
 
     if( result.action )
     break;
@@ -275,7 +275,8 @@ function actionsForSubject( subject )
 {
   var self = this;
 
-  var result = self.vocabulary.subjectDescriptorForWithClause( subject, self.clausing );
+  var result = self.vocabulary.withSubphrase( subject );
+  // var result = self.vocabulary.subjectDescriptorForWithClause( subject, self.clausing );
 
   return result;
 }
