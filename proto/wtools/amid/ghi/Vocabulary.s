@@ -171,9 +171,9 @@ function actionsRegister( phrases, o )
     else throw _.err( 'unexpected' );
 
     if( o )
-    _.mapSupplement( action, o );
+    _.props.supplement( action, o );
 
-    _.mapSupplement( action, phraseOptionsDefault );
+    _.props.supplement( action, phraseOptionsDefault );
 
     return action;
   }
@@ -188,7 +188,7 @@ function actionsRegister( phrases, o )
     e = e.action;
     if( _.strIs( e ) )
     return e;
-    return _.mapSupplement( {}, e, o );
+    return _.props.supplement( {}, e, o );
   });
 
   var vocabulary = self.vocabulary = self.vocabulary || wVocabulary
@@ -288,7 +288,7 @@ function phrasesGet( o )
   var self = this;
   var o = o || {};
 
-  _.routineOptions( phrasesGet, o );
+  _.routine.options_( phrasesGet, o );
 
   var phraseArray = self.vocabulary.phraseArray.slice();
 
@@ -449,7 +449,7 @@ function activate( o )
   throw _.err( 'unexepected arguments' );
 
   _.assert( arguments.length === 1 );
-  _.routineOptions( activate, o );
+  _.routine.options_( activate, o );
 
   if( !o.action )
   {
@@ -490,7 +490,7 @@ function deactivate( o )
   var o = o || {};
 
   _.assert( arguments.length <= 1 );
-  _.routineOptions( deactivate, o );
+  _.routine.options_( deactivate, o );
 
   if( !self.activeAction )
   return;
