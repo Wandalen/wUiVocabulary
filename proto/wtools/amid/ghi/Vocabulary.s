@@ -178,7 +178,7 @@ function actionsRegister( phrases, o )
     return action;
   }
 
-  if( _.objectIs( phrases ) )
+  if( _.object.isBasic( phrases ) )
   phrases = [ phrases ];
 
   var o = o || {};
@@ -522,7 +522,7 @@ function handleActivate( action, args, argsMap )
   var con;
 
   _.assert( arguments.length >= 1 && arguments.length <= 3 );
-  _.assert( _.objectIs( action ) );
+  _.assert( _.object.isBasic( action ) );
   _.assert( _.strIs( action.phrase ) );
 
   if( !action.enabled )
