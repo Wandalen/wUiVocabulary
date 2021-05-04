@@ -182,7 +182,7 @@ function actionsRegister( phrases, o )
   phrases = [ phrases ];
 
   var o = o || {};
-  phrases = _.map_( null, phrases, function( e )
+  phrases = _.container.map_( null, phrases, function( e )
   {
     if( _.routineIs( e ) )
     e = e.action;
