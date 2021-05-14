@@ -1,6 +1,6 @@
 {
   "name" : "wuivocabulary",
-  "version" : "0.3.80",
+  "version" : "0.3.81",
   "description" : "Class to connect phrases with dom elements on the page",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
@@ -18,11 +18,11 @@
   },
   "dependencies" :
   {
-    "wTools" : "stable",
-    "wCopyable" : "stable",
-    "wLogger" : "stable",
-    "wvocabulary" : "stable"
+    "wTools" : "delta",
+    "wCopyable" : "delta",
+    "wLogger" : "delta",
+    "wvocabulary" : "delta"
   },
-  "devDependencies" : { "eslint" : "7.1.0", "wTesting" : "stable" },
+  "devDependencies" : { "eslint" : "7.1.0", "wTesting" : "delta" },
   "keywords" : [ "wTools" ]
 }
