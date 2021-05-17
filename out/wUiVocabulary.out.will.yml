@@ -2,12 +2,9 @@ format: outwillfile-2.0
 root:
   - wUiVocabulary.out
 consistency:
-  ../.ex.will.yml: &ref_0
-    hash: a6994f8c46975745f5d591b023a4cd92
-    size: 1690
-  ../.im.will.yml: &ref_1
-    hash: ee60037acc0e8420cce9dcfa6eb78f3a
-    size: 5000
+  ../will.yml: &ref_0
+    hash: f3fc1ef736922776c02108e6a70804ee
+    size: 6444
 module:
   wUiVocabulary.out:
     about:
@@ -16,19 +13,19 @@ module:
       description: ___
       enabled: 1
       version: 0.4.0
-      interpreters: &ref_2
+      license: MIT
+      npm.name: wuivocabulary
+      author: Kostiantyn Wandalen <wanalen@01.school>
+      keywords: &ref_1
+        - tools
+        - wTools
+      contributors: &ref_2
+        - Kostiantyn Wandalen <wanalen@01.school>
+      interpreters: &ref_3
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords: &ref_3
-        - tools
-        - wTools
-      license: MIT
-      author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: &ref_4
-        - Kostiantyn Wandalen <wanalen@01.school>
-      npm.name: wuivocabulary
-      npm.scripts: &ref_5
+      npm.scripts: &ref_4
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -43,15 +40,11 @@ module:
       module.original.willfiles:
         criterion:
           predefined: 1
-        path:
-          - ../.ex.will.yml
-          - ../.im.will.yml
+        path: ../will.yml
       module.peer.willfiles:
         criterion:
           predefined: 1
-        path:
-          - ../.ex.will.yml
-          - ../.im.will.yml
+        path: ../will.yml
       module.peer.in:
         criterion:
           predefined: 1
@@ -787,8 +780,7 @@ module:
           content: proto
           export: 1
     consistency:
-      ../.ex.will.yml: *ref_0
-      ../.im.will.yml: *ref_1
+      ../will.yml: *ref_0
   ../:
     about:
       name: wUiVocabulary
@@ -796,26 +788,22 @@ module:
       description: ___
       enabled: 1
       version: 0.4.0
-      interpreters: *ref_2
-      keywords: *ref_3
       license: MIT
-      author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: *ref_4
       npm.name: wuivocabulary
-      npm.scripts: *ref_5
+      author: Kostiantyn Wandalen <wanalen@01.school>
+      keywords: *ref_1
+      contributors: *ref_2
+      interpreters: *ref_3
+      npm.scripts: *ref_4
     path:
       module.willfiles:
         criterion:
           predefined: 1
-        path:
-          - .ex.will.yml
-          - .im.will.yml
+        path: will.yml
       module.original.willfiles:
         criterion:
           predefined: 1
-        path:
-          - .ex.will.yml
-          - .im.will.yml
+        path: will.yml
       module.peer.willfiles:
         criterion:
           predefined: 1
@@ -1472,9 +1460,6 @@ module:
           - 'build::release'
           - 'build::npm'
     consistency:
-      ../.ex.will.yml:
-        hash: a6994f8c46975745f5d591b023a4cd92
-        size: 1690
-      ../.im.will.yml:
-        hash: ee60037acc0e8420cce9dcfa6eb78f3a
-        size: 5000
+      ../will.yml:
+        hash: f3fc1ef736922776c02108e6a70804ee
+        size: 6444
