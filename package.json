@@ -1,28 +1,38 @@
 {
-  "name" : "wuivocabulary",
-  "version" : "0.3.85",
-  "description" : "Class to connect phrases with dom elements on the page",
-  "author" : "Kostiantyn Wandalen <wanalen@01.school>",
-  "license" : "MIT",
-  "main" : "proto/node_modules/wuivocabulary",
-  "files" : [ "proto/wtools/amid/ghi", "proto/node_modules", "proto/node_modules/Tools", "proto/node_modules/wuivocabulary" ],
-  "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen .build proto" },
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https ://github.com/Wandalen/wUiVocabulary.git"
+  "name": "wuivocabulary",
+  "version": "0.3.86",
+  "description": "Class to connect phrases with dom elements on the page",
+  "author": "Kostiantyn Wandalen <wanalen@01.school>",
+  "license": "MIT",
+  "main": "proto/node_modules/wuivocabulary",
+  "files": [
+    "proto/wtools/amid/ghi",
+    "proto/node_modules",
+    "proto/node_modules/Tools",
+    "proto/node_modules/wuivocabulary"
+  ],
+  "scripts": {
+    "test": "wtest .run 'proto/**' rapidity:-3",
+    "docgen": "wdocgen .build proto"
   },
-  "bugs" :
-  {
-    "url" : "https ://github.com/Wandalen/wUiVocabulary/issues"
+  "repository": {
+    "type": "git",
+    "url": "https ://github.com/Wandalen/wUiVocabulary.git"
   },
-  "dependencies" :
-  {
-    "wTools" : "gamma",
-    "wCopyable" : "gamma",
-    "wLogger" : "gamma",
-    "wvocabulary" : "gamma"
+  "bugs": {
+    "url": "https ://github.com/Wandalen/wUiVocabulary/issues"
   },
-  "devDependencies" : { "eslint" : "7.1.0", "wTesting" : "gamma" },
-  "keywords" : [ "wTools" ]
+  "dependencies": {
+    "wvocabulary": "gamma",
+    "wTools": "gamma",
+    "wLogger": "gamma",
+    "wCopyable": "gamma"
+  },
+  "devDependencies": {
+    "wTesting": "gamma",
+    "eslint": "7.1.0"
+  },
+  "keywords": [
+    "wTools"
+  ]
 }
